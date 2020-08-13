@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/testdeploy/static/css/main.5f361e03.chunk.css",
+    "main.js": "/testdeploy/static/js/main.b0971a48.chunk.js",
+    "main.js.map": "/testdeploy/static/js/main.b0971a48.chunk.js.map",
+    "runtime-main.js": "/testdeploy/static/js/runtime-main.b7171ece.js",
+    "runtime-main.js.map": "/testdeploy/static/js/runtime-main.b7171ece.js.map",
+    "static/css/2.6a69c2e1.chunk.css": "/testdeploy/static/css/2.6a69c2e1.chunk.css",
+    "static/js/2.6c5eaeec.chunk.js": "/testdeploy/static/js/2.6c5eaeec.chunk.js",
+    "static/js/2.6c5eaeec.chunk.js.map": "/testdeploy/static/js/2.6c5eaeec.chunk.js.map",
+    "index.html": "/testdeploy/index.html",
+    "precache-manifest.6bff5710f69a7caa5798992fc2c8b918.js": "/testdeploy/precache-manifest.6bff5710f69a7caa5798992fc2c8b918.js",
+    "service-worker.js": "/testdeploy/service-worker.js",
+    "static/css/2.6a69c2e1.chunk.css.map": "/testdeploy/static/css/2.6a69c2e1.chunk.css.map",
+    "static/css/main.5f361e03.chunk.css.map": "/testdeploy/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.6c5eaeec.chunk.js.LICENSE.txt": "/testdeploy/static/js/2.6c5eaeec.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/testdeploy/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b7171ece.js",
+    "static/css/2.6a69c2e1.chunk.css",
+    "static/js/2.6c5eaeec.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.b0971a48.chunk.js"
+  ]
+}
