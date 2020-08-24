@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 
 import { Control, LocalForm, Errors, action } from 'react-redux-form';
-import { baseUrl } from '../shared/baseUrl';
-import { FadeTransform, Fade, Stagger } from 'react-animation-components';
-import {Loading } from './LoadingComponent'
+import {Fade, Stagger } from 'react-animation-components';
+import {Loading } from './LoadingComponent';
+
 import {
     Card,
-    CardImg,
-    CardText,
     CardBody,
-    CardTitle,
+    CardImg,
     CardHeader,
-    Breadcrumb,
-    BreadcrumbItem,
     Modal,
     ModalHeader,
     Label,
@@ -21,6 +17,7 @@ import {
     Row,
     Col
 } from 'reactstrap';
+import './customstyles.css';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -53,18 +50,36 @@ class CommentComponent extends Component {
     }
     RenderComments({ comments }) {
         const list = comments.map((comment) => {
+        	if(comment.id%2===0)
             return (
                 <Fade in>
-			        <li key={comment.id}>
-			            <p className="row">{comment.message}</p>
+			        <li key={comment.id} >
+			        <Card className="text-secondary innerMessageCardRight" outline color="secondary">
+			        <div className="container">
+			            <p className="row"><strong>{comment.message}</strong></p>
 			            <p>-- {comment.author} {"   "}{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+			        </div>
+			        </Card>
+			        </li>
+			    </Fade>
+            );
+        	else
+        		return (
+                <Fade in>
+			        <li key={comment.id} >
+			        <Card className="text-secondary innerMessageCardLeft" outline color="secondary">       
+			        <div className="container">
+			            <p className="row"><strong>{comment.message}</strong></p>
+			            <p>-- {comment.author} {"   "}{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+			        </div>
+			        </Card>
 			        </li>
 			    </Fade>
             );
         });
         return (
-            <Card inverse style={{backgroundColor:"#333",borderColor:"#300"}}>
-            <CardHeader tag="h3" >
+            <Card outline color="secondary" style={{"border-radius":"40px","overflow":"hidden"}}>
+            <CardHeader tag="h3" className="text-secondary border-secondary">
 		                    Comments
             </CardHeader>
 		        <CardBody>
@@ -75,9 +90,11 @@ class CommentComponent extends Component {
 	                            {list}
 	                        </Stagger>
 	                    </ul>
-		                <div className="row">
-		                    <Button  onClick={this.toggleComment}>
-		                        <span className="fa fa-pencil"></span>{" "}Submit Comment</Button>
+	                    <div className="container">
+		                <div className="row" style={{"margin-top":"20px"}}>
+		                    <Button color="secondary"  style={{"border-radius":"40px",padding:"10px"}} onClick={this.toggleComment}>
+		                        Leave a Comment{" "} <span className="fa fa-comment"></span></Button>
+		                </div>
 		                </div>
 		            </div>
 		        </CardBody>
@@ -103,16 +120,72 @@ class CommentComponent extends Component {
 			    </div>
             );
         } else if (this.props.comments != null) {
+        	const Commentsform=()=>{
+        		return(
+        			<Card>
+        			<CardHeader tag="h3">
+        				Leave us a comment!
+        			</CardHeader>
+        			<CardBody>
+        			<LocalForm onSubmit={(values)=>this.handleComment(values)}>
+			                    <Row className="form-group">
+			                        <Label htmlFor="author" md={2}>Name</Label>
+			                        <Col md={10}>
+			                        <Control.text className="form-control" model=".author" id="author" name="author" placeholder="Name" validators={{required,validName:validName(3,15)}} />
+			                        <Errors className="alert-danger text-center" model=".author" show="touched" messages={{
+											required:" required ! .. ",
+											validName:" Please enter a valid name(3-20 characters) "
+										}} />
+			                        </Col>
+			                    </Row>
+			                    <Row className="form-group">
+			                        <Label htmlFor="email" md={2}>Email</Label>
+			                        <Col md={10}>
+			                        <Control.text className="form-control" model=".email" id="email" name="email" placeholder="Email ID" validators={{required,validEmail}} />
+			                        <Errors className="alert-danger text-center" model=".email" show="touched" messages={{
+											required:"required ! ..",
+											validEmail:" Please enter a valid email "
+										}} />
+			                        </Col>
+			                    </Row>
+			                    <Row className="form-group">
+			                        <Label htmlFor="message" md={2}>Comment</Label>
+			                        <Col md={10}>
+			                        <Control.textarea className="form-control" model=".message" id="message" name="message" placeholder="Tell us about your opinion" rows={12} validators={{validName:validName(2,500)}} />
+			                        <Errors className="alert-danger text-center" model=".message" show="touched" messages={{
+											required:" required ! .. ",
+											validName:" Write something before you submit "
+										}} />
+			                        </Col>
+			                    </Row>
+			                    <Row className="form-group">
+			                        <Col md={{size:10,offset:2}}>
+			                        <Button type="submit" color="primary">
+			                            <span className="fa fa-pencil "> </span>
+			                            {" "}Submit 
+			                        </Button>
+			                        </Col>
+			                    </Row>
+			                </LocalForm>
+			            </CardBody>
+			            </Card>
+			        );
+        	};
             return (
                 <div className="container">
+                	<div className="row ">
+			            <div className="col-12 col-md-8 col-lg-6 offset-md-2 m-1" >
+			                <Commentsform/>
+			            </div>
+			        </div>
 			        <div className="row ">
-			            <div className="col-12 col-md-9 offset-md-3 m-1" >
+			            <div className="col-12 col-md-8 col-lg-6 offset-md-2 m-1" >
 			                {this.RenderComments({comments:this.props.comments})}
 			            </div>
 			        </div>
 			        <Modal isOpen={this.state.isCommentFormOpen} toggle={this.toggleComment}>
 			            <ModalHeader toggle={this.toggleComment}>
-			                Submit Comment
+			                Kindly leave your thoughts below
 			            </ModalHeader>
 			            <ModalBody>
 			                <LocalForm onSubmit={(values)=>this.handleComment(values)}>
@@ -150,7 +223,7 @@ class CommentComponent extends Component {
 			                        <Col md={{size:10,offset:2}}>
 			                        <Button type="submit" color="primary">
 			                            <span className="fa fa-pencil "> </span>
-			                            {" "}Submit feedback
+			                            {" "}Submit 
 			                        </Button>
 			                        </Col>
 			                    </Row>
