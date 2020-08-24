@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/testdeploy/static/css/main.5f361e03.chunk.css",
-    "main.js": "/testdeploy/static/js/main.fbfbbd54.chunk.js",
-    "main.js.map": "/testdeploy/static/js/main.fbfbbd54.chunk.js.map",
+    "main.css": "/testdeploy/static/css/main.c8612ef4.chunk.css",
+    "main.js": "/testdeploy/static/js/main.1e459f34.chunk.js",
+    "main.js.map": "/testdeploy/static/js/main.1e459f34.chunk.js.map",
     "runtime-main.js": "/testdeploy/static/js/runtime-main.b7171ece.js",
     "runtime-main.js.map": "/testdeploy/static/js/runtime-main.b7171ece.js.map",
     "static/css/2.6a69c2e1.chunk.css": "/testdeploy/static/css/2.6a69c2e1.chunk.css",
-    "static/js/2.6c5eaeec.chunk.js": "/testdeploy/static/js/2.6c5eaeec.chunk.js",
-    "static/js/2.6c5eaeec.chunk.js.map": "/testdeploy/static/js/2.6c5eaeec.chunk.js.map",
+    "static/js/2.d0248647.chunk.js": "/testdeploy/static/js/2.d0248647.chunk.js",
+    "static/js/2.d0248647.chunk.js.map": "/testdeploy/static/js/2.d0248647.chunk.js.map",
     "index.html": "/testdeploy/index.html",
-    "precache-manifest.7fc3042f3bc0da072e363346885c0164.js": "/testdeploy/precache-manifest.7fc3042f3bc0da072e363346885c0164.js",
+    "precache-manifest.e34d08745bb355afb577d2cd91030284.js": "/testdeploy/precache-manifest.e34d08745bb355afb577d2cd91030284.js",
     "service-worker.js": "/testdeploy/service-worker.js",
     "static/css/2.6a69c2e1.chunk.css.map": "/testdeploy/static/css/2.6a69c2e1.chunk.css.map",
-    "static/css/main.5f361e03.chunk.css.map": "/testdeploy/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.6c5eaeec.chunk.js.LICENSE.txt": "/testdeploy/static/js/2.6c5eaeec.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.min.css": "/testdeploy/static/media/fontawesome-webfont.fee66e71.woff"
+    "static/css/main.c8612ef4.chunk.css.map": "/testdeploy/static/css/main.c8612ef4.chunk.css.map",
+    "static/js/2.d0248647.chunk.js.LICENSE.txt": "/testdeploy/static/js/2.d0248647.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/testdeploy/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/pngguru.com.png": "/testdeploy/static/media/pngguru.com.18cdb459.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b7171ece.js",
     "static/css/2.6a69c2e1.chunk.css",
-    "static/js/2.6c5eaeec.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.fbfbbd54.chunk.js"
+    "static/js/2.d0248647.chunk.js",
+    "static/css/main.c8612ef4.chunk.css",
+    "static/js/main.1e459f34.chunk.js"
   ]
 }
