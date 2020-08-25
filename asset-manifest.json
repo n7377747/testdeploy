@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/testdeploy/static/css/main.a13b9728.chunk.css",
-    "main.js": "/testdeploy/static/js/main.59902bc8.chunk.js",
-    "main.js.map": "/testdeploy/static/js/main.59902bc8.chunk.js.map",
-    "runtime-main.js": "/testdeploy/static/js/runtime-main.b7171ece.js",
-    "runtime-main.js.map": "/testdeploy/static/js/runtime-main.b7171ece.js.map",
+    "main.js": "/testdeploy/static/js/main.7961749b.chunk.js",
+    "main.js.map": "/testdeploy/static/js/main.7961749b.chunk.js.map",
+    "runtime-main.js": "/testdeploy/static/js/runtime-main.bd9127f3.js",
+    "runtime-main.js.map": "/testdeploy/static/js/runtime-main.bd9127f3.js.map",
     "static/css/2.6a69c2e1.chunk.css": "/testdeploy/static/css/2.6a69c2e1.chunk.css",
-    "static/js/2.4bc7aba5.chunk.js": "/testdeploy/static/js/2.4bc7aba5.chunk.js",
-    "static/js/2.4bc7aba5.chunk.js.map": "/testdeploy/static/js/2.4bc7aba5.chunk.js.map",
+    "static/js/2.c8bbc29c.chunk.js": "/testdeploy/static/js/2.c8bbc29c.chunk.js",
+    "static/js/2.c8bbc29c.chunk.js.map": "/testdeploy/static/js/2.c8bbc29c.chunk.js.map",
     "index.html": "/testdeploy/index.html",
-    "precache-manifest.bd9900b694ab5932da10b8ece4c19946.js": "/testdeploy/precache-manifest.bd9900b694ab5932da10b8ece4c19946.js",
+    "precache-manifest.81520e4d6a9f2e04d040a1cb87d62af3.js": "/testdeploy/precache-manifest.81520e4d6a9f2e04d040a1cb87d62af3.js",
     "service-worker.js": "/testdeploy/service-worker.js",
     "static/css/2.6a69c2e1.chunk.css.map": "/testdeploy/static/css/2.6a69c2e1.chunk.css.map",
     "static/css/main.a13b9728.chunk.css.map": "/testdeploy/static/css/main.a13b9728.chunk.css.map",
-    "static/js/2.4bc7aba5.chunk.js.LICENSE.txt": "/testdeploy/static/js/2.4bc7aba5.chunk.js.LICENSE.txt",
+    "static/js/2.c8bbc29c.chunk.js.LICENSE.txt": "/testdeploy/static/js/2.c8bbc29c.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/testdeploy/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/pngguru.com.png": "/testdeploy/static/media/pngguru.com.18cdb459.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b7171ece.js",
+    "static/js/runtime-main.bd9127f3.js",
     "static/css/2.6a69c2e1.chunk.css",
-    "static/js/2.4bc7aba5.chunk.js",
+    "static/js/2.c8bbc29c.chunk.js",
     "static/css/main.a13b9728.chunk.css",
-    "static/js/main.59902bc8.chunk.js"
+    "static/js/main.7961749b.chunk.js"
   ]
 }
