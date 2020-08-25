@@ -13,8 +13,8 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps=(dispatch)=>({
   postComment:(comment)=>dispatch(postComment(comment)),
-  fetchComments:()=>{dispatch(fetchComments())}
-  
+  fetchComments:()=>{dispatch(fetchComments())},
+  resetFeedbackForm:()=>{dispatch(actions.reset('feedback'))}
 })
 
 
@@ -38,6 +38,7 @@ render(){
 			commentsErrMess={this.props.comments.errMess}
 			comments={this.props.comments.comments}
 			postComment={this.props.postComment}
+			resetFeedbackForm={this.props.resetFeedbackForm}
 			 />
 		</div>
 		);

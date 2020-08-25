@@ -18,7 +18,10 @@ export const postComment=(comment)=>(dispatch)=>{
 		credentials:'same-origin'
 	})
 	.then(response=>{
-		if(response.ok) return response;
+		if(response.ok) {
+			alert("Thanks for your feedback!");
+			return response;
+		}
 		else {
 			var error=new Error('Error '+response.status+': '+response.statusText);
 			error.response=response;
