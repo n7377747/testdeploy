@@ -96,17 +96,19 @@ class CommentComponent extends Component {
 					key={comment.id}
 				>
 					<div>
-						<div>
-							<CardImg height={250} width={350} src={require("./pngguru.com.png")} alt="no image" />
-							<CardImgOverlay><br /><br /><h3><strong>{comment.message.slice(0, 20) + "..."}</strong></h3>
-								<p> ~ {comment.author} {" ,  "}{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(comment.date)))}</p>
-							</CardImgOverlay>
-
-						</div>
-						<br />
-						<br />
+						<Collapse isOpen={!this.state.toastShow}>
+							<Card className="roundedBottomCorners roundedTopCorners" inverse color="dark">
+							<CardBody>
+							
+							<h4><strong>{comment.message.slice(0, 20) + "..."}</strong></h4>
+								<p> ~ {comment.author} </p>
+								
+							</CardBody>
+							</Card>
+						</Collapse>	
+						
 						<Collapse isOpen={this.state.toastShow}>
-							<Card className="roundedBottomCorners"inverse color="dark">
+							<Card className="roundedBottomCorners roundedTopCorners"inverse color="dark">
 								<CardBody>
 									<p><strong>{comment.message}</strong></p>
 									<p> ~ {comment.author} {" ,  "}{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(comment.date)))}</p>
